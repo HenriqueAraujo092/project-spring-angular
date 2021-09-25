@@ -1,0 +1,9 @@
+PROJETO SPRING & ANGULAR
+
+O que é SOFIA? {
+    - Service-Oriented Front-End Architecture / Arquitetura de Front-End Orientada a Serviços
+
+    - O download do front é feito somente uma vez, apos isso é feito so o trafego de dados
+}
+
+--- Parei na 2. Fundamentos do REST
