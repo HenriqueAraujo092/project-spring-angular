@@ -51,3 +51,5 @@ Idempotencia {
     Se uma operação é idempotente pode chamar quantas vezes quiser 
     exemplo: delete, get, put sao idempotentes mas o POST nao é
 }
+
+--- Parei na 3. Primeira consultas e cadastros na API
