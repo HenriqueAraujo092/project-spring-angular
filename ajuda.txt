@@ -6,4 +6,48 @@ O que é SOFIA? {
     - O download do front é feito somente uma vez, apos isso é feito so o trafego de dados
 }
 
---- Parei na 2. Fundamentos do REST
+Modelo de maturidade Richardson {
+    - Nivel 0
+        Nao é REST
+        HTTP só para transporte 
+        Chama um unico serviço
+        exemplo: POST localhost/buscarHorarios...
+
+    - Nivel 1
+        Ainda nao é REST
+        Ja consegue usar um recurso
+        exemplo: POST localhost/buscarHorarios/pereira...
+
+    - Nivel 2
+        Já é uma arquitetura REST
+        usa tipos de requisiçções corretas e trata melhor os retornos
+        exemplo: GET localhost/buscarHorarios/pereira/horarios?data=2017-10-02&status=disponivel...
+
+    - Nivel 3 
+        Aqui é o REST completo
+        O que muda é que no nivel 3 ele mostra o que posso fazer apos a requisição, me da caminhos
+}
+
+Hateoas {
+    Hypertext As The Engine Of Application State
+    No retorno do protocolo dizer como fazer outras ações
+    Padrao para escrever os links: HAL - Hypertext_Application_Language
+}
+
+Segurança {
+    https
+    Autenticação e Autorização {
+        BASIC 
+        DIGEST 
+        Certificados
+        Tokens
+    }
+    OAuth
+}
+
+Idempotencia {
+    Um metodo é considerado idempotente se o resuktado por ele produzido é o mesmo, independente do numero de vezes que é executado
+    exemplo: 5x0 = 0, 5x0x0x0x0x0 = 0
+    Se uma operação é idempotente pode chamar quantas vezes quiser 
+    exemplo: delete, get, put sao idempotentes mas o POST nao é
+}
