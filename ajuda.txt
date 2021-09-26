@@ -52,4 +52,34 @@ Idempotencia {
     exemplo: delete, get, put sao idempotentes mas o POST nao é
 }
 
---- Parei na 3. Primeira consultas e cadastros na API
+Iniciando projeto {
+    Preferi começar o projeto pelo Spring Inicializer
+    https://start.spring.io/
+
+    Lá fiz as configurações basicas e adicionei 3 dependencias...
+        Web, Jpa e DevTools
+
+    Apos o projeto ser criado adicionamos tambem a conexao com o banco de dados...
+    Precisamos ir no arquivo src/main/resources/application.properties
+    Escrever todas informações do banco
+
+    Depois colocar no arquivo pom.xml a dependencia do banco
+
+    Usar o Flyway para criar as migrations
+        Começar colocando a dependencia do Flyway no pom.xml
+        Crie os caminhos...
+            src/main/resources/db 
+            src/main/resources/db/migration
+        Na pasta migration crie as migrations, que devem seguir sempre essa sintaxi...
+            V01__[O-QUE-A-MIGRATION-FAZ].sql
+            exemplo: V001_criar_e_registrar_categorias.sql
+
+    Criar models...
+        Cria um packeg de model, dentro dele crie a class da model, por exemplo a classe categoria...
+        set os campos da classe
+        gere os Getters e Setters com o comando 'ggsa'
+        Gere o cashCOde com 'ghca' so do codigo
+
+}
+
+-- parei no FAS_3.6-cadastrando-nova-categoria-com-POST-v1
